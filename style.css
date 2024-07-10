@@ -1,0 +1,164 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-image: url(bg.jpg);
+  background-size: cover; /* Adjust as needed */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+:root {
+  --background-images-lazy: image-set(
+    "bg.jpg" 1x,
+    "bg.jpg" 2x,
+    "bg.jpg" 3x
+  );
+}
+
+.your-element {
+  background-image: var(--background-images-lazy);
+}
+
+
+.center-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100px; /* Adjust the size as needed */
+  background: none; /* Remove white background */
+}
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.container header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+.container .form {
+  margin-top: 30px;
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #333;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+
+
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
+}
+.form button:hover {
+  background: rgb(88, 56, 250);
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  
+}
+
+
+/* Course selection styling */
+.input-box.course-selection {
+  margin-top: 20px;
+}
+
+.input-box.course-selection label {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.input-box.course-selection select,
+.input-box.course-selection input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #707070;
+  outline: none;
+}
+
+.input-box.course-selection select {
+  background-color: #f9f9f9;
+  /* Add any other styling you'd like for the select element */
+}
+
+.input-box.course-selection input[type="text"] {
+  /* Add any specific styling for the input field */
+}
+
+/* Optional: Style the placeholder text */
+.input-box.course-selection input::placeholder {
+  color: #aaa;
+}
+
+/* Optional: Add hover effect or focus styles */
+.input-box.course-selection select:hover,
+.input-box.course-selection input[type="text"]:hover,
+.input-box.course-selection select:focus,
+.input-box.course-selection input[type="text"]:focus {
+  border-color: #007bff;
+  /* Add any other hover or focus styles you prefer */
+}
