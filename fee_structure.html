@@ -2,43 +2,49 @@
 <html lang=“en”>
 
 <head>
-    <meta charset=“UTF-8”>
-    <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         /* styles.css */
         body {
-            font-family:"Calibri", sans-serif;
+            font-family: "Calibri", sans-serif;
             font-size: large;
             margin: 50px;
             padding: 10px;
             background-color: #f9f9f9;
-            
+
         }
 
         .container {
             width: 100%;
             height: auto;
-            
-            
-            
-           
+
+
+
+
             /* Add a border frame */
-         }
+        }
+
         .logo-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 10vh; /* Adjust as needed */
-            
+            height: 10vh;
+            /* Adjust as needed */
+
         }
-        
+
         .logo-container img {
-            width: 150px; /* Adjust the logo width as needed */
-            height: auto; /* Maintain aspect ratio */
-            margin-bottom: 50px; /* Add spacing between logo and heading */
+            width: 150px;
+            /* Adjust the logo width as needed */
+            height: auto;
+            /* Maintain aspect ratio */
+            margin-bottom: 50px;
+            /* Add spacing between logo and heading */
             /* Add any other styling you want for the logo */
         }
-    
+
         h1,
         h2,
         p,
@@ -97,6 +103,67 @@
             background-color: #f5f5f5;
 
         }
+
+        .back-button {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #000000;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            border-radius: 4px;
+
+        }
+
+        .back-button:hover {
+            background-color: #ff0000;
+        }
+
+        .formButtonfront {
+            width: 50%;
+            /* Takes half of the page width */
+        }
+
+
+        /* Add these responsive styles to your existing CSS */
+
+        /* Adjust font size for smaller screens */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: medium;
+
+            }
+        }
+
+        /* Center the logo on smaller screens */
+        @media screen and (max-width: 480px) {
+            .logo-container {
+                height: auto;
+            }
+
+            .logo-container img {
+                width: 100px;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Make the table scroll horizontally on small screens */
+        @media screen and (max-width: 600px) {
+            table {
+                overflow-x: auto;
+            }
+
+            .table-container {
+                width: 100%;
+                /* Adjust as needed */
+            }
+
+            .formButtonfront {
+                width: 100%;
+                /* Adjust as needed */
+                max-width: 25em;
+                /* Fallback for IE8 */
+            }
+        }
     </style>
 </head>
 
@@ -104,10 +171,10 @@
     <div class="logo-container">
         <img src="logo-fee.png" alt="Logo">
     </div>
-    
-    
+
+
     <div style="max-width:800px; margin: 0 auto; padding: 20px;">
-        
+
         <h1>Pythonic EduTech: Empowering Learners Through guidance.</h1>
         <p>Pythonic EduTech, a leading educational technology company based in India, specializes in Python development
             and data science training. Our mission is to equip learners with practical skills that align with industry
@@ -115,8 +182,8 @@
             projects, and expert guidance.</p>
         <p><strong>Website:</strong> <a href=“https://pythonicedutech.github.io/home/”>click here!!</a></p>
         <p><strong>Portfolio:</strong> <a href=“https://nameispankaj.github.io/myportfolio/”>click here!!</a></p>
-        
-        
+
+
 
         <h2>Course Fee Structure:</h2>
         <p>Below, you’ll find the fee details for various courses offered by Pythonic EduTech. Whether you’re diving
@@ -171,6 +238,9 @@
         <p><strong>Note:</strong> Once your advance payment is processed, we’ll promptly share the detailed syllabus for
             your chosen course. You’ll get a comprehensive overview of what to expect, including topics, modules, and
             project components.</p>
+
+        <a href="index.html" class="back-button">Go Back</a>
+
     </div>
 
 </body>
